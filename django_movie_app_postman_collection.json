@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "403248bd-6f81-4a02-9e6b-4ed86d37c84b",
+		"name": "Movie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28548808"
+	},
+	"item": [
+		{
+			"name": "User SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\":\"Ahmed\",\n    \"last_name\":\"Ali\",\n    \"username\":\"ahmedali\",\n    \"email\":\"ahmedali@gmail.com\",\n    \"password\":\"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"admin@gmail.com\",\n    \"password\":\"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "movie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movie/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movie",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "movie_resp",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/movie/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"movie",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 06 May 2024 20:23:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.10"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "8637"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 17,\n        \"name\": \"Money Monster\",\n        \"description\": \"In the real-time, high stakes thriller Money Monster, George Clooney and Julia Roberts star as financial TV host Lee Gates and his producer Patty, who are put in an explosive situation when an irate investor who has lost everything (Jack O’Connell) forcefully takes over their studio. During a tense standoff broadcast to millions on live TV, Lee and Patty must work furiously against the clock to unravel the mystery behind a conspiracy at the heart of today's fast-paced, high-tech global markets.\",\n        \"img_path\": \"http://127.0.0.1:8000/media/Money_Monster_CBH2lfU.jpg\",\n        \"duration\": 99,\n        \"genre\": \"Thriller\",\n        \"language\": \"English\",\n        \"mpaa_Rating\": {\n            \"type\": \"PG\",\n            \"label\": \"Some Intense Sequences\"\n        },\n        \"user_rating\": 4,\n        \"created_at\": \"2024-05-06T18:52:21.011571Z\",\n        \"updated_at\": \"2024-05-06T20:23:23.973245Z\"\n    },\n    {\n        \"id\": 19,\n        \"name\": \"Marvel's Captain America: Civil War\",\n        \"description\": \"Marvel’s Captain America: Civil War picks up where - Avengers: Age of Ultron - left off, as Steve Rogers leads the new team of Avengers in their continued efforts to safeguard humanity. After another international incident involving the Avengers results in collateral damage, political pressure mounts to install a system of accountability and a governing body to determine when to enlist the services of the team. The new status quo fractures the Avengers while they try to protect the world from a new and nefarious villain.\",\n        \"img_path\": \"http://127.0.0.1:8000/media/capt_america_npX1Njc.png\",\n        \"duration\": 148,\n        \"genre\": \"Action,Adventure\",\n        \"language\": \"English\",\n        \"mpaa_Rating\": {\n            \"type\": \"PG\",\n            \"label\": \"Some Intense Sequences\"\n        },\n        \"user_rating\": 0,\n        \"created_at\": \"2024-05-06T18:54:12.050305Z\",\n        \"updated_at\": \"2024-05-06T20:23:23.995506Z\"\n    },\n    {\n        \"id\": 21,\n        \"name\": \"Twenty Four\",\n        \"description\": \"This sci-fi thriller is about time travel, the one thing that humans cannot control... but what if someone has the power to do so?\",\n        \"img_path\": \"http://127.0.0.1:8000/media/TwentyFour.jpg\",\n        \"duration\": 163,\n        \"genre\": \"Thriller\",\n        \"language\": \"Tamil\",\n        \"mpaa_Rating\": {\n            \"type\": \"PG\",\n            \"label\": \"Some Violence\"\n        },\n        \"user_rating\": 3.5,\n        \"created_at\": \"2024-05-06T19:00:02.635815Z\",\n        \"updated_at\": \"2024-05-06T20:23:24.012347Z\"\n    },\n    {\n        \"id\": 23,\n        \"name\": \"Bad Neighbours 2\",\n        \"description\": \"Returning stars Seth Rogen, Zac Efron and Rose Byrne are joined by Chloë Grace Moretz for Neighbors 2: Sorority Rising, the follow-up to 2014’s most popular original comedy. Nicholas Stoller again directs in a film that follows what happens when the will of parenthood goes against the bonds of sisterhood. Now that Mac (Rogen) and Kelly Radner (Byrne) have a second baby on the way, they are ready to make the final move into adulthood: the suburbs. But just as they thought they’d reclaimed the neighborhood and were safe to sell, they learn that the new occupants next door are a sorority even more out of control than Teddy (Efron) and his brothers ever dreamed of being.\",\n        \"img_path\": \"http://127.0.0.1:8000/media/BadNeighbours2.jpeg\",\n        \"duration\": 110,\n        \"genre\": \"Comedy\",\n        \"language\": \"English\",\n        \"mpaa_Rating\": {\n            \"type\": \"R21\",\n            \"label\": \"Sexual Content & Drug Use\"\n        },\n        \"user_rating\": 2.5,\n        \"created_at\": \"2024-05-06T19:04:24.467240Z\",\n        \"updated_at\": \"2024-05-06T20:23:24.031260Z\"\n    },\n    {\n        \"id\": 24,\n        \"name\": \"Azhar\",\n        \"description\": \"Azhar is based on a few highly talked about incidents and facts in Azhar’s life, Azharuddin, who ended up becoming the country’s most controversial sportsman yet. From setting world records that are yet to be broken, to getting embroiled in the first ever match fixing scandal the country witnessed, the film traces Azhar’s insurmountable highs and his tremendous lows. <br><br>The film begins with Azhar as a young child from a middle class home in Hyderabad who dreams of becoming a cricketer and captures his entry on sheer merit in the professional arena of Indian cricket as a teenager. Drawing parallels with his personal and professional life, we are introduced to a young and shy Azhar who’s arranged marriage with Naureen throws light on his private world that was forever closed to the media and the public glare. <br><br>His rise as the captain of Indian cricket team shows us the metamorphoses of the man who enjoys a flamboyant life style and has become accustomed to the adulation of fans and the media. At this point, Sangeeta enters the scene. Azhar’s eventual marriage with the actress changes his life forever. <br><br>Even as Azhar is set to create a record of having played 100 test matches, the biggest twist in his career comes when he is accused of being involved in the match fixing scandal. The first ever controversy of this magnitude, witnessed by the country, cuts short his career bringing him much shame and ignominy. <br><br>From being labelled a living legend, Azhar becomes an accused. How that change happens and what Azhar goes through when faced with life-damning allegations- form the crux of the story. Though the film is not a biopic, for the first time, Azhar, the film, provides us with the inner view of a much publicized life and times, of the cricketing hero who fell from grace and changed the gentleman’s game forever.\",\n        \"img_path\": \"http://127.0.0.1:8000/media/Azhar_Hindi_poster.jpg\",\n        \"duration\": 130,\n        \"genre\": \"Sports,Biopic\",\n        \"language\": \"HIndi\",\n        \"mpaa_Rating\": {\n            \"type\": \"PG\",\n            \"label\": \"Some Violence\"\n        },\n        \"user_rating\": 3,\n        \"created_at\": \"2024-05-06T19:08:09.184099Z\",\n        \"updated_at\": \"2024-05-06T20:23:24.041254Z\"\n    },\n    {\n        \"id\": 25,\n        \"name\": \"My New Sassy Girl\",\n        \"description\": \"A sequel to the 2001 movie - My Sassy Girl - Gyun-woo can't forget the sassy girl. One day he meets the love of his life again and marries her. However, he goes through a honeymoon which no man would ever dream of...\",\n        \"img_path\": \"http://127.0.0.1:8000/media/MyNewSassyGirl.jpg\",\n        \"duration\": 100,\n        \"genre\": \"Comedy,Romance\",\n        \"language\": \"Korean\",\n        \"mpaa_Rating\": {\n            \"type\": \"PG\",\n            \"label\": \"\"\n        },\n        \"user_rating\": 4.4,\n        \"created_at\": \"2024-05-06T19:29:29.410939Z\",\n        \"updated_at\": \"2024-05-06T20:23:24.057389Z\"\n    },\n    {\n        \"id\": 27,\n        \"name\": \"Long Long Time Ago 2\",\n        \"description\": \"After the 1969 nationwide floods, Zhao Di takes over her father’s family farm with the help of reformed gangster Ah Long. <br><br>In 1977, the Government begins expropriating land for redevelopment, forcing villagers from their kampongs. Licensed farmland owners, such as Zhao Di, are financially compensated for their land. Ah Kun, Zhao Di’s greedy brother accuses Zhao Di and Ah Long of having an affair to tarnish her name in front of the family. In the midst of Ah Kun’s persistent accusations, Zhao Di’s health takes a hit. Will Zhao Di be able to keep her hard-earned compensation money? What will become of her family if Zhao Di’s health continues to deteriorate? <br><br>As people change with time, will the kampong spirit remain?\",\n        \"img_path\": \"http://127.0.0.1:8000/media/Long_Long_Time_Ago_2.jpg\",\n        \"duration\": 121,\n        \"genre\": \"Comedy,Drama\",\n        \"language\": \"Mandarin\",\n        \"mpaa_Rating\": {\n            \"type\": \"PG13\",\n            \"label\": \"Some Sexual Reference\"\n        },\n        \"user_rating\": 4.4,\n        \"created_at\": \"2024-05-06T19:46:05.175486Z\",\n        \"updated_at\": \"2024-05-06T20:23:24.072156Z\"\n    },\n    {\n        \"id\": 28,\n        \"name\": \"Before I Wake\",\n        \"description\": \"In this creepy and terrifying thriller, Cody's new foster parents Jessie and Mark can't wait to welcome the special little boy into their home. Once he settles in, Jessie and Mark soon discover Cody has a very unique gift - his vibrant and imaginative dreams come to life all around him while he is sleeping. When the curious new parents begin to cultivate this strange phenomenon by lulling Cody into deep sleep, they find that the creatures of his darkest nightmares will also come alive, wrecking havoc in the night.\",\n        \"img_path\": \"http://127.0.0.1:8000/media/BeforeIWake.jpg\",\n        \"duration\": 97,\n        \"genre\": \"Horror\",\n        \"language\": \"English\",\n        \"mpaa_Rating\": {\n            \"type\": \"PG13\",\n            \"label\": \"Horror\"\n        },\n        \"user_rating\": 0,\n        \"created_at\": \"2024-05-06T19:48:25.180725Z\",\n        \"updated_at\": \"2024-05-06T20:23:24.089088Z\"\n    },\n    {\n        \"id\": 30,\n        \"name\": \"Finding Mr Right 2: Book Of Love\",\n        \"description\": \"Tang Wei plays the role of Xiao Ye a lonely gal who immigrated to Macau with her father since she was 15 years old. The casino has become like home to her. She meets Daniel, portrayed by Wu Xiubo, a real estate broker and father of teenage son. The story talks about two people who exchanged letters to each other sharing their most personal and intimate self in each of those letter. They fall in love and finds solace in each other.\",\n        \"img_path\": \"http://127.0.0.1:8000/media/FindingMrRight2Book_Of_Love.jpeg\",\n        \"duration\": 110,\n        \"genre\": \"Romance\",\n        \"language\": \"Mandarin\",\n        \"mpaa_Rating\": {\n            \"type\": \"PG13\",\n            \"label\": \"Some Coarse Language\"\n        },\n        \"user_rating\": 0,\n        \"created_at\": \"2024-05-06T19:53:15.912709Z\",\n        \"updated_at\": \"2024-05-06T20:23:24.098633Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "create movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Finding Mr Right 2: Book Of Love",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Tang Wei plays the role of Xiao Ye a lonely gal who immigrated to Macau with her father since she was 15 years old. The casino has become like home to her. She meets Daniel, portrayed by Wu Xiubo, a real estate broker and father of teenage son. The story talks about two people who exchanged letters to each other sharing their most personal and intimate self in each of those letter. They fall in love and finds solace in each other.",
+							"type": "text"
+						},
+						{
+							"key": "img_path",
+							"type": "file",
+							"src": "/home/ali/Downloads/FindingMrRight2Book Of Love.jpeg"
+						},
+						{
+							"key": "duration",
+							"value": "110",
+							"type": "text"
+						},
+						{
+							"key": "genre",
+							"value": "Romance",
+							"type": "text"
+						},
+						{
+							"key": "language",
+							"value": "Mandarin",
+							"type": "text"
+						},
+						{
+							"key": "mpaa_Rating",
+							"value": "{\n  \"type\": \"PG13\",\n  \"label\": \"Some Coarse Language\"\n  }",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movie/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movie",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rate a movie",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NjAzNjc4LCJpYXQiOjE3MTUwMTE2NzgsImp0aSI6IjM0ZDg1YTM4N2ZkNjQ2ZWJiYmU5NzdjM2U0NjY3MmJkIiwidXNlcl9pZCI6MX0.m6Ha1GLkQ_eI22dmny94ARTvcda2G8oddKrgCCbyxKk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rating\":3.1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/movies/28/rate/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"movies",
+						"28",
+						"rate",
+						""
+					],
+					"query": [
+						{
+							"key": "rating",
+							"value": "4",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

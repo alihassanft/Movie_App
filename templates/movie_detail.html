@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ movie.name }} - Movie Detail</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .movie-title {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .movie-info {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        .movie-details {
+            flex: 1;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .movie-image {
+            text-align: left;
+        }
+
+        {% comment %} img {
+            max-width: 100%;
+            height: auto;
+        } {% endcomment %}
+        img {
+            width: 300px; /* Adjust this value to your desired width */
+            height: 400px; /* Adjust this value to your desired height */
+            object-fit: cover; /* Ensures that the entire image is visible within the specified dimensions */
+            border-radius: 5px;
+        }
+
+        h1, h2 {
+            text-align: left;
+        }
+
+        hr {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="movie-title">
+            <a href="#" onclick="history.back()">Back</a>
+            <h1>{{ movie.name }}</h1>
+            <h2>MPAA Rating: {{ movie.mpaa_Rating.type }} - {{ movie.mpaa_Rating.label }}</h2>
+            <hr> <!-- Horizontal line to separate title and MPAA rating from other details -->
+        </div>
+        <div class="movie-info">
+            <div class="movie-image">
+                <img src="{{ movie.img_path.url }}" alt="{{ movie.name }}">
+            </div>
+            <div class="movie-details">
+                <h2>Details</h2>
+                <p><strong>Duration:</strong> {{ movie.duration }} minutes</p>
+                <p><strong>Language:</strong> {{ movie.language }}</p>
+                <p><strong>User Rating:</strong> {{ movie.user_rating }}</p>
+                <h2>Description</h2>
+                <p>{{ movie.description }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

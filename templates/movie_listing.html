@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        .movie-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 1200px; /* Adjust as needed */
+        }
+
+        .movie {
+            width: calc(25% - 20px); /* Adjust the width as needed */
+            margin-bottom: 20px;
+        }
+
+        .movie img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .movie h2 {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .movie p {
+            font-size: 14px;
+            color: #666;
+            max-height: 80px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .movie:nth-child(4n) {
+                clear: both;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>Movie Listing</h2>
+    <input type="text" id="search-input" placeholder="Search by movie name">
+    <hr>
+    </div>
+    
+    <div class="movie-container">
+        {% for movie in movies %}
+        <div class="movie">
+            <a href="{% url 'movie_detail' movie.id %}">
+                <img src="/media/{{ movie.img_path }}" alt="{{ movie.name }}" width="{{ movie.width }}" height="{{ movie.height }}">
+                <h2>{{ movie.name }}</h2>
+                <p>{{ movie.duration }} min</p>
+                <p>{{ movie.user_rating }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('search-input');
+            const movies = document.querySelectorAll('.movie');
+
+            searchInput.addEventListener('input', function () {
+                const searchTerm = searchInput.value.toLowerCase();
+
+                movies.forEach(function (movie) {
+                    const movieName = movie.querySelector('h2').textContent.toLowerCase();
+
+                    if (movieName.includes(searchTerm)) {
+                        movie.style.display = 'block';
+                    } else {
+                        movie.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
